@@ -7,7 +7,11 @@ engine = create_async_engine(
     settings.ASYNC_DATABASE_URL,
     echo=True,
     future=True,
-    connect_args={"check_same_thread": False}  # Solo para SQLite
+    pool_pre_ping=True,  # Buena práctica
+    connect_args={
+
+        "ssl": "require"
+    }  # Solo para SQLite
 )
 
 AsyncSessionLocal = sessionmaker(
