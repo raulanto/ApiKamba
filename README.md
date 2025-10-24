@@ -58,3 +58,6 @@ uvicorn app.main:app --reload
 ```
 
 La API estará disponible en: **http://localhost:8000**
+
+
+La api en produccion se encuentra desplegada en: **https://api-kamba.vercel.app/**
